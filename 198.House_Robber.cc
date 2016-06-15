@@ -1,7 +1,7 @@
 class Solution {
 public:
     int rob(vector<int>& nums) {
-    int n = nums.size();
+        int n = nums.size();
         int loot[n];
         switch(n) {
             case 0:     return 0;
@@ -13,7 +13,7 @@ public:
                         for(i=2; i<n; i++) {
                             loot[i] = max(loot[i-2]+nums[i], loot[i-1]);
                         }
-        }
-        return loot[n-1];
+    }
+    return loot[n-1];
     }
 };
